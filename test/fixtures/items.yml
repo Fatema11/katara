@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  open_time: 2012-11-13 21:50:05
+  close_time: 2012-11-13 21:50:05
+  open_days: MyString
+  longitude: 
+  latitude: 
+  category: MyString
+
+two:
+  name: MyString
+  description: MyText
+  open_time: 2012-11-13 21:50:05
+  close_time: 2012-11-13 21:50:05
+  open_days: MyString
+  longitude: 
+  latitude: 
+  category: MyString

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @item.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @item.description %>
+</p>
+
+<p>
+  <b>Open time:</b>
+  <%= @item.open_time %>
+</p>
+
+<p>
+  <b>Close time:</b>
+  <%= @item.close_time %>
+</p>
+
+<p>
+  <b>Open days:</b>
+  <%= @item.open_days %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @item.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @item.latitude %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @item.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
