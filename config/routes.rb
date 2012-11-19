@@ -1,4 +1,16 @@
 SeniorProject::Application.routes.draw do
+  get "maps/dining"
+
+  get "maps/activities"
+
+  get "maps/events"
+
+  get "maps/communities"
+
+  get "maps/services"
+
+  get "maps/landmarks"
+
   get "home/index"
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
@@ -9,6 +21,9 @@ SeniorProject::Application.routes.draw do
 
   match 'login' => 'sessions#new', :as => :login
 
+match 'home' => 'home#index', :as => :home
+
+get 'maps/all'
   resources :sessions
 
   resources :users

@@ -3,13 +3,11 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.string :name
       t.text :description
-      t.time :open_time
-      t.time :close_time
-      t.string :open_days
-      t.decimal :longitude
-      t.decimal :latitude
+      t.integer :building_number
       t.string :category
-
+      t.integer :phone
+      t.string :email
+      t.string :website
       t.timestamps
     end
   end

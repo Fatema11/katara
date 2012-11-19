@@ -13,31 +13,16 @@
 
 ActiveRecord::Schema.define(:version => 20121113191233) do
 
-  create_table "events", :force => true do |t|
-    t.string   "name"
-    t.string   "location"
-    t.string   "string"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.time     "start_time"
-    t.time     "end_time"
-    t.decimal  "longitude"
-    t.decimal  "latitude"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "items", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.time     "open_time"
-    t.time     "close_time"
-    t.string   "open_days"
-    t.decimal  "longitude"
-    t.decimal  "latitude"
+    t.integer  "building_number"
     t.string   "category"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "phone"
+    t.string   "email"
+    t.string   "website"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "users", :force => true do |t|

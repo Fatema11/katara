@@ -19,30 +19,34 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
-  <div class="field">
-    <%= f.label :open_time %><br />
-    <%= f.time_select :open_time %>
+
+<div class="field">
+    <%= f.label :building_number %><br />
+    <%= f.text_field :building_number %>
   </div>
-  <div class="field">
-    <%= f.label :close_time %><br />
-    <%= f.time_select :close_time %>
+  
+<div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
   </div>
-  <div class="field">
-    <%= f.label :open_days %><br />
-    <%= f.text_field :open_days %>
+
+<div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
+
+<div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
   </div>
-  <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </div>
+  
   <div class="field">
     <%= f.label :category %><br />
-    <%= f.text_field :category %>
+    <%= f.select :category,Item::ITEM_CATEGORY,:prompt => true %>
   </div>
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
