@@ -1,38 +1,37 @@
 <!DOCTYPE HTML> 
 <html>
 <head>
+
+
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/> 
 <link href='stylesheets/style.css' rel='stylesheet'/>
 </head>
 <body>
 
-<header><a href="/home"><img src="images/landingpage3.png" alt="skyline" ></a> </header>
+<header><a href="/"><img src="images/landingpage3.png" alt="skyline" ></a> </header>
 <div id='slider3' class='swipe'>
   <ul>
 	<!---SLIDE 1 -->
 	<li style='display:block'><div><div id="listhead">Activities</div>
 
-<div id="list">
+<div id="list"><div class="scroll">
 
 <% @items.each do |item| %>
 <ul>  <%  if item.category == "Activities" %>
   <tr>
-  <li>  <td><%= item.name %></td>  </li>
+  <li>  <td><%= item.name %></td> </li>
   </tr>
-  Item desc </div>
   </ul>
-
+<%= item.description %>
 <% end  %>
 <% end  %>
-</div>
-
-</br>
- <div id="compass"><a href="/maps/activities"><img src="images/compass.png" alt="compass"></a></div> 
-    
-    </div></li>
-    
+</div></div>
+ <div id="compass"><a href="/maps/dining"><img src="images/compass.png" alt="compass"></a></div> 
+</div></li>
+  
+      
     <!---SLIDE 2 -->
-    <li style='display:none'><div><div id="listhead">Dining</div>
+    <li style='display:none'><div><div id="listhead">Dining</div><div id="anchor"><a name="dining">" "</a></div>
 
 <div id="list">
 

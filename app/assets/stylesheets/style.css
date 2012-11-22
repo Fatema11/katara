@@ -9,7 +9,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, 
 body {
   -webkit-text-size-adjust:none;
   font-family:sans-serif;
-    background-image: url('background.png');
+    background-image: url('bg1.jpg');
   background-size: 100%;
   background-repeat:repeat-y;
 }
@@ -35,37 +35,58 @@ a {
   margin:0 0 0 0px;
   font-size:12px;
   color:#3c3c3c;
-}
+} 
 .swipe {
   padding-bottom:20px;
 }
 .swipe li div, .swipe div div div {
   margin: 0 1%px;
   margin-top: 1%;
-  padding: 20px 20px;
+  padding: 20px;
   color:#fff;
-
-
 }
+
+
 
 li
 {
 padding-bottom: 10px;
 }
+
+
 #listhead
 {
-  font-weight:bold;
-  text-align:center;
-  background-color:brown;
-   font-family:serif;
-     font-size:24px;
-  }
+font-weight:bold;
+text-align:center;
+background-color:brown;
+opacity:0.6;
+background-filter:alpha(opacity=60);
+font-family:serif;
+font-size:24px;
+float: center;
+}
+
+#anchor
+{
+    float: right;
+    
+}
 
 #list
 {
-padding: 5%;
 text-align:left;
 color: black;
 font-family:serif;
-  font-size:18px;
+font-size:18px;
+size: 100%;
+margin-left: 3%;
+height:100%;
 }
+
+div.scroll
+{
+width:90%;
+height:100%;
+overflow:scroll;
+}
+

@@ -21,7 +21,7 @@ SeniorProject::Application.routes.draw do
 
   match 'login' => 'sessions#new', :as => :login
 
-match 'home' => 'home#index', :as => :home
+
 
 get 'maps/all'
   resources :sessions
