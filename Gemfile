@@ -7,10 +7,10 @@ gem 'rails', '3.2.1'
 
 #gem 'sqlite3'
 
-
-group :development, :test do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+group :development do
+  gem 'sqlite3', '1.3.5'
 end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,6 +25,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :production do
+  gem 'pg', '0.12.2'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -46,6 +50,3 @@ gem 'nifty-generators'
 
 gem "mocha", :group => :test
 
-group :production do
-  gem 'pg'
-end
