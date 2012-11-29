@@ -9,21 +9,22 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, 
 body {
   -webkit-text-size-adjust:none;
   font-family:sans-serif;
-    background-image: url('bg1.jpg');
+    background-image: url('background1.jpg');
   background-size: 100%;
   background-repeat:repeat-y;
 }
+
 
 h1 {
   font-size:36px;
   margin:15px;
   text-align:center;
-  color:#666;
+  color:black;
 }
 h2 {
   font-size:14px;
   font-weight:bold;
-  color:#3c3c3c;
+  color:black;
   margin:20px 10px 10px;
 }
 small {
@@ -42,10 +43,9 @@ a {
 .swipe li div, .swipe div div div {
   margin: 0 1%px;
   margin-top: 1%;
-  padding: 20px;
-  color:#fff;
+/* padding: 20px 20px; */
+  color: white;
 }
-
 
 
 li
@@ -60,17 +60,21 @@ font-weight:bold;
 text-align:center;
 background-color:brown;
 opacity:0.6;
-background-filter:alpha(opacity=60);
+/*background-filter:alpha(opacity=60); */
 font-family:serif;
 font-size:24px;
-float: center;
+margin: 0 1%px;
+  margin-top: 1%;
+  padding: 20px 20px;
+  color: white;
 }
 
-#anchor
+#activitiesa, #communitiesa, #servicesa, #landmarksa, #eventsa, #dininga
 {
-    float: right;
-    
+text-align: right;
+
 }
+
 
 #list
 {

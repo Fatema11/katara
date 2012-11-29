@@ -12,26 +12,30 @@
 <div id='slider3' class='swipe'>
   <ul>
 	<!---SLIDE 1 -->
-	<li style='display:block'><div><div id="listhead">Activities</div>
+	<li style='display:block'><div><div id="listhead">Activities<a id="activitiesa">></a></div>
 
-<div id="list"><div class="scroll">
+<!--<div class="scroll">-->
+
+<div id="list">
 
 <% @items.each do |item| %>
-<ul>  <%  if item.category == "Activities" %>
+<ul>  <%  if item.category == "Dining" %>
   <tr>
   <li>  <td><%= item.name %></td> </li>
   </tr>
   </ul>
-<%= item.description %>
+
 <% end  %>
 <% end  %>
-</div></div>
- <div id="compass"><a href="/maps/dining"><img src="images/compass.png" alt="compass"></a></div> 
+</div>
+<!--</div>-->
+
+<div id="compass"><a href="/maps/dining"><img src="images/compass.png" alt="compass"></a>
 </div></li>
   
       
     <!---SLIDE 2 -->
-    <li style='display:none'><div><div id="listhead">Dining</div><div id="anchor"><a name="dining">" "</a></div>
+    <li style='display:none'><div><div id="listhead">Dining<a id="dininga">></a></div>
 
 <div id="list">
 
@@ -49,7 +53,7 @@
 </div></li>
    
    <!---SLIDE 3 -->
-    <li style='display:none'><div><div id="listhead">Communities</div>
+    <li style='display:none'><div><div id="listhead">Communities<a id="communitiesa">></a></div>
   
 <div id="list">
 
@@ -69,7 +73,7 @@
    </div></li>
    
    <!---SLIDE 4 -->
-    <li style='display:none'><div><div id="listhead">Services</div>
+    <li style='display:none'><div><div id="listhead">Services<a id="servicesa">></a></div>
 <div id="list">
 
 <% @items.each do |item| %>
@@ -87,7 +91,7 @@
 </div></li>
 
    <!---SLIDE 5 -->
-  <li style='display:none'><div><div id="listhead">Landmarks</div>
+  <li style='display:none'><div><div id="listhead">Landmarks<a id="landmarksa">></a></div>
  <div id="list">
 
 <% @items.each do |item| %>
@@ -106,7 +110,7 @@
 </div></li>
 
 <!---SLIDE 6 -->
- <li style='display:none'><div><div id="listhead">Events</div>
+ <li style='display:none'><div><div id="listhead">Events<a id="eventsa">></a></div>
 <div id="list">
 
 <% @items.each do |item| %>
