@@ -7,8 +7,13 @@
 	</head>
 	
 <header>
+  <% if logged_in? %>
+  <a href="/items/new">Add an item</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/logout">Logout</a>
+  <%end%>
 <div id="media">
+  
 <img src="images/landingpage2.png" alt="skyline"> 
+
 	<a href="https://www.facebook.com/KataraQatar"> <img class= "link1" src="images/facebook.png" alt="facebook" > </a>
 	<a href="https://twitter.com/kataraqatar"><img class="link2" src="images/twitter.png" alt="twitter" ></a>
 	<a href="http://www.youtube.com/user/kataraqatar?feature=results_main"> <img class="link3" src="images/youtube.png" alt="youtube" > </a>
@@ -25,7 +30,7 @@
 
 <table border="1">
 <tr>
-<td><a href="/items"><img src="images/logos/Activities.png" alt="activity"></a></td>
+<td><a href="/items#activitiesa"><img src="images/logos/Activities.png" alt="activity"></a></td>
 <td><a href="/items#communitiesa"><img src="images/logos/Community.png" alt="community"></a></td>
 </tr>
 <tr>
@@ -33,7 +38,7 @@
 <td><a href="/items#eventsa"><img src="images/logos/Event.png" alt="event"></a></td>
 </tr>
 <tr>
-<td><a href="/items#landmarks"><img src="images/logos/Landmark.png" alt="landmark"></a></td>
+<td><a href="/items#landmarksa"><img src="images/logos/Landmark.png" alt="landmark"></a></td>
 <td><a href="/items#servicesa"><img src="images/logos/Service.png" alt="service"></a></td>
 </tr>
 </table>
