@@ -19,7 +19,7 @@
 <div id="list">
 
 <% @items.each do |item| %>
-<ul>  <%  if item.category == "Dining" %>
+<ul>  <%  if item.category == "Activities" %>
   <tr>
   <li>  <td><%= item.name %></td> </li>
   </tr>
@@ -30,31 +30,13 @@
 </div>
 <!--</div>-->
 
-<div id="compass"><a href="/maps/dining"><img src="images/compass.png" alt="compass"></a>
+<div id="compass"><a href="/maps/activities"><img src="images/compass.png" alt="compass"></a>
 </div></li>
   
       
     <!---SLIDE 2 -->
-    <li style='display:none'><div><div id="listhead">Dining<a id="dininga">></a></div>
-
-<div id="list">
-
-<% @items.each do |item| %>
-<ul>  <%  if item.category == "Dining" %>
-  <tr>
-  <li>  <td><%= item.name %></td> </li>
-  </tr>
-  </ul>
-
-<% end  %>
-<% end  %>
-</div>
- <div id="compass"><a href="/maps/dining"><img src="images/compass.png" alt="compass"></a></div> 
-</div></li>
-   
-   <!---SLIDE 3 -->
     <li style='display:none'><div><div id="listhead">Communities<a id="communitiesa">></a></div>
-  
+
 <div id="list">
 
 <% @items.each do |item| %>
@@ -67,8 +49,26 @@
 <% end  %>
 <% end  %>
 </div>
-
  <div id="compass"><a href="/maps/communities"><img src="images/compass.png" alt="compass"></a></div> 
+</div></li>
+   
+   <!---SLIDE 3 -->
+    <li style='display:none'><div><div id="listhead">Dining<a id="dininga">></a></div>
+  
+<div id="list">
+
+<% @items.each do |item| %>
+<ul>  <%  if item.category == "Dining" %>
+  <tr>
+  <li>  <td><%= item.name %></td> </li>
+  </tr>
+  </ul>
+
+<% end  %>
+<% end  %>
+</div>
+
+ <div id="compass"><a href="/maps/dining"><img src="images/compass.png" alt="compass"></a></div> 
 
    </div></li>
    

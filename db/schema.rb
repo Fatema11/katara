@@ -14,16 +14,18 @@
 ActiveRecord::Schema.define(:version => 20121113191233) do
 
   create_table "items", :force => true do |t|
-    t.string   "name"
+    t.string   "name",            :limit => nil
     t.text     "description"
     t.integer  "building_number"
-    t.string   "category"
+    t.string   "category",        :limit => nil
     t.integer  "phone"
-    t.string   "email"
-    t.string   "website"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string   "email",           :limit => nil
+    t.string   "website",         :limit => nil
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "items", ["id"], :name => "sqlite_autoindex_items_1", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "username"
