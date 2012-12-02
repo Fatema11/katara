@@ -12,6 +12,8 @@ SeniorProject::Application.routes.draw do
   get "maps/landmarks"
 
   get "home/index"
+  
+  get "home/mapspage"
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
@@ -21,14 +23,16 @@ SeniorProject::Application.routes.draw do
 
   match 'login' => 'sessions#new', :as => :login
 
+match '/mapspage' => 'home#mapspage', :as => :maps_instructions
 
-
+  
 get 'maps/all'
+
   resources :sessions
 
   resources :users
 
-  resources :events
+ 
 
   resources :items
 

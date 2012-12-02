@@ -5,6 +5,9 @@
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
+     <% if logged_in? %>
+  <a href="/items/new">Add an item</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/mapspage">Map instructions</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/logout">Logout</a> 
+  <%end%>
     <%= yield(:head) %>
   </head>
   <body>
