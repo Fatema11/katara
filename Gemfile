@@ -28,6 +28,7 @@ gem 'jquery-rails'
 
 group :production do
   gem 'pg', '0.12.2'
+  gem 'taps'
 end
 
 # To use ActiveModel has_secure_password
@@ -51,3 +52,5 @@ gem 'nifty-generators'
 gem "mocha", :group => :test
 
 gem "bcrypt-ruby", :require => "bcrypt"
+
+gem 'sequel'
