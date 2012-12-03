@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
+  
+  before_filter :login_required, :except => [:index, :show]
+  
   def index
     @items = Item.all
 

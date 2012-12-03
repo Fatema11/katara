@@ -14,21 +14,21 @@
 	<!---SLIDE 1 -->
 	<li style='display:block'><div><div id="listhead">Activities<a id="activitiesa">></a></div>
 
-<!--<div class="scroll">-->
+
 
 <div id="list">
 
 <% @items.each do |item| %>
 <ul>  <%  if item.category == "Activities" %>
   <tr>
-  <li>  <td><%= item.name %></td> </li>
+  <li>  <td><%= link_to "#{item.name}", item %></td> </li>
   </tr>
   </ul>
 
 <% end  %>
 <% end  %>
 </div>
-<!--</div>-->
+
 
 <div id="compass"><a href="/maps/activities"><img src="images/compass.png" alt="compass"></a>
 </div></li>
@@ -42,7 +42,7 @@
 <% @items.each do |item| %>
 <ul>  <%  if item.category == "Communities" %>
   <tr>
-  <li>  <td><%= item.name %></td> </li>
+  <li>  <td><%= link_to "#{item.name}", item %></td></td> </li>
   </tr>
   </ul>
 
@@ -60,7 +60,7 @@
 <% @items.each do |item| %>
 <ul>  <%  if item.category == "Dining" %>
   <tr>
-  <li>  <td><%= item.name %></td> </li>
+  <li>  <td><%= link_to "#{item.name}", item %></td> </li>
   </tr>
   </ul>
 
@@ -79,7 +79,7 @@
 <% @items.each do |item| %>
 <ul>  <%  if item.category == "Services" %>
   <tr>
-  <li>  <td><%= item.name %></td> </li>
+  <li>  <td><%= link_to "#{item.name}", item %></td> </li>
   </tr>
   </ul>
 
@@ -97,7 +97,7 @@
 <% @items.each do |item| %>
 <ul>  <%  if item.category == "Landmarks" %>
   <tr>
-  <li>  <td><%= item.name %></td> </li>
+  <li>  <td><%= link_to "#{item.name}", item %></td> </li>
   </tr>
   </ul>
 
@@ -116,7 +116,7 @@
 <% @items.each do |item| %>
 <ul>  <%  if item.category == "Events" %>
   <tr>
-  <li>  <td><%= item.name %></td> </li>
+  <li>  <td><%= link_to "#{item.name}", item %></td> </li>
   </tr>
   </ul>
 

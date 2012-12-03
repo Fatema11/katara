@@ -26,6 +26,7 @@ SeniorProject::Application.routes.draw do
 match '/mapspage' => 'home#mapspage', :as => :maps_instructions
 
   
+  
 get 'maps/all'
 
   resources :sessions
