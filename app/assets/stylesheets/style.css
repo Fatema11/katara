@@ -34,8 +34,9 @@ small {
 }
 a {
   margin:0 0 0 0px;
-  font-size:12px;
+  font-size:14px;
   color:#3c3c3c;
+  text-decoration: none;
 } 
 .swipe {
   padding-bottom:20px;
@@ -50,7 +51,9 @@ a {
 
 li
 {
-padding-bottom: 10px;
+padding-bottom: 15px;
+list-style-type: none;
+
 }
 
 
@@ -71,7 +74,7 @@ margin: 0 1%px;
 
 #activitiesa, #communitiesa, #servicesa, #landmarksa, #eventsa, #dininga
 {
-text-align: right;
+float: right;
 
 }
 
