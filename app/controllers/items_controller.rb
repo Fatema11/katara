@@ -24,6 +24,11 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show_image
+    @item = Item.find(params[:id])
+    send_data @item.image, :type => 'image/jpg',:disposition => 'inline'
+end
+
   # GET /items/new
   # GET /items/new.json
   def new

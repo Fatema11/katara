@@ -1,5 +1,5 @@
 class CreateItems < ActiveRecord::Migration
-  def change
+  def up
     create_table :items do |t|
       t.string :name
       t.text :description
@@ -8,9 +8,16 @@ class CreateItems < ActiveRecord::Migration
       t.integer :phone
       t.string :email
       t.string :website
+      t.startdate :date
+      t.enddate :date
+      t.picture :binary
       t.timestamps
-	  t.date :startdate
-	  t.date :enddate
     end
   end
+  
+  def self.down
+    drop_table :users
+  end
+  
+  
 end
