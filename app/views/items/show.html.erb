@@ -35,20 +35,6 @@
   <%= @item.category %>
 </p>
 
-<p>
-  <% if @item.category == 'Events' %>
-  <%= @item.startdate %>
-  <%= @item.enddate %>
-  <%end%>
-</p>
-
-<%= image_tag @item.picture unless @item.picture.blank?  %>
-
-<p>
-<%= link_to "Click here to View #{@item.name} on the map", @item.location %>
-
-</p>
-
 <br>
 <% if logged_in? %>
   <%= link_to 'Edit', edit_item_path(@item) %> |

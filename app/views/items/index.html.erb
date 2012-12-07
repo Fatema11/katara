@@ -1,5 +1,4 @@
 <!DOCTYPE HTML> 
-<%= javascript_include_tag :defaults %>
 <html>
 <head>
 
@@ -22,14 +21,9 @@
 <% @items.each do |item| %>
 <ul>  <%  if item.category == "Activities" %>
   <tr>
-  <td> <li>  <%= link_to "#{item.name}", item %> </li> </td>
- </ul>
-  <% if logged_in? %> %>
-  <td><%= link_to "Edit", edit_item_path(item) %></td>
-      <td><%= link_to "Deletee", item, :confirm => 'Are you sure?', :method => :delete %></td>
-    <%end%>
+  <li>  <td><%= link_to "#{item.name}", item %></td> </li>
   </tr>
-  
+  </ul>
 
 <% end  %>
 <% end  %>
