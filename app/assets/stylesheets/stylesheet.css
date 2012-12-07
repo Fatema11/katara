@@ -1,35 +1,51 @@
 
-header img { width: 100%; }
+#skyline { display:none; }
 
 body {
-background-image: url('background1.jpg');
-background-repeat: repeat-y;
+background-image: url('newBG.jpg');
+background-repeat: none;
 background-size: 100%;
 }
 
 
+.newspaper
+{
+-moz-column-count:6; /* Firefox */
+-webkit-column-count:6; /* Safari and Chrome */
+column-count:6;
+margin-top: 15%;
+text-align: center;
+font-family: sans-serif;
+font-style: bold;
+}
+
+.newspaper img
+{
+height:auto;
+max-width:70%;
+} 
+
 .link1{
 position:absolute;
-top:5%;
-left:5%;
-width:7%;
+top:3%;
+left:2%;
+width:4%;
 height:5%;
-
 }
 
 .link2{
 position:absolute;
-top:5%;
-left:12%;
-width:7%;
+top:3%;
+left:7%;
+width:4%;
 height:5%;
 }
 
 .link3{
 position:absolute;
-top:5%;
-left:19%;
-width:7.5%;
+top:3%;
+left:12%;
+width:4.5%;
 height:5.5%;
 
 }
@@ -42,57 +58,67 @@ margin:2%;
 }
 
 
-td
-{
-
-text-align: center;
-font-family: sans-serif;
-font-style: bold;
+#weather{
+position:absolute;
+right:3%;
+top: 1%;
+margin:2%;
 }
 
-table, th{
-    border: 0px;
-    width: 100%;
-    height: 100%;
-        
+#contactkatara
+{
+background-color: #E8D18E;
+padding: 1%;
+margin-left: 9%; 
+width: 80%; 
+float: center;
+height: 250px;
 }
 
-td img
+#contactkatara h3
 {
-height:auto;
-max-width:100%;
-
-} 
-
-
-
-#wrapper
-{
-  overflow:hidden;
+font-weight:bold;
+text-align:center;
+background-color:brown;
+opacity:0.6;
+/*background-filter:alpha(opacity=60); */
+font-size:24px;
+margin: 0 1%px;
+padding: 20px 20px;
+color: white;
 }
 
-#wrapper ul
+#contact1
 {
-  list-style:none;
-  margin:0;
-  padding:0;
-  -webkit-transition: -webkit-transform 0.3s linear;
-}
+float: left;
+width: 45%; 
+margin: 2%; 
+margin-top: 1%; }
 
-#wrapper ul li
-{
-  float:left;
-}
+#contact2
+{ float: right; width: 45%;
+margin: 2%;
+margin-top: 1%;}
 
 
 #compass
 {
-text-align: center;
+display: none;
 }
 
 login
 {
 text-align: left;
+}
+
+
+
+@media screen and (max-width: 480px)  {
+
+
+#compass
+{
+display: inline;
 }
 
 #compass img
@@ -103,6 +129,66 @@ text-align: center;
 }
 
 
-Smartphones (portrait) ----------- @media only screen and (max-width : 320px) {
+
+#skyline  {  display:inline; }
+#skyline img { width: 100%; }
+
+body {
+background-image: url('newBG.jpg');
+background-size: 100%;
+background-repeat: repeat-y;
+}
+
+.link1{
+position:absolute;
+top:5%;
+left:5%;
+width:8%;
+height:6%;
+
+}
+
+.link2{
+position:absolute;
+top:5%;
+left:14%;
+width:8%;
+height:6%;
+}
+
+.link3{
+position:absolute;
+top:5%;
+left:23%;
+width:8.5%;
+height:6.5%;
+}
+
+.newspaper
+{
+margin-top: 8%;
+-moz-column-count:2; /* Firefox */
+-webkit-column-count:2; /* Safari and Chrome */
+column-count:2;
+margin-top: none;
+}
+
+#desktopcontent
+{
+display: none;
+}
+
+#compass
+{
+display: block;
+text-align: center;
+width: 100%;
+}
+#compass img
+{
+width: 40%;
+float: center;
+text-align: center;
+}
 
 }
