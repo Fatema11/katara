@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121203165801) do
+ActiveRecord::Schema.define(:version => 20121113191233) do
 
   create_table "items", :force => true do |t|
     t.string   "name",            :limit => nil
@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(:version => 20121203165801) do
     t.string   "website",         :limit => nil
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "startdate"
-    t.date     "enddate"
+    t.string   "location",        :limit => nil
+    t.binary   "picture"
+    t.datetime "startdate"
+    t.datetime "enddate"
   end
 
   add_index "items", ["id"], :name => "sqlite_autoindex_items_1", :unique => true
