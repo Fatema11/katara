@@ -9,10 +9,105 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, 
 body {
   -webkit-text-size-adjust:none;
   font-family:sans-serif;
-    background-image: url('background1.jpg');
+    background-image: url('newBG.jpg');
   background-size: 100%;
-  background-repeat:repeat-y;
+  background-repeat:none;
 }
+
+#listbody { width: 12000px; } 
+
+.panel { width: 930px; float: left; padding-left: 30px; padding-right: 100px; margin-top: 45px; } 
+
+ul#banner { position: fixed; line-height: 45px; margin: 0 30px; padding: 0; } 
+
+ul#banner li { list-style: none; } 
+
+
+
+
+#desktopviewcontent
+{
+margin-top: -2%;
+}
+
+#accordion p
+{
+color: grey;
+margin: 1%; 
+}
+
+#accordion h3
+{
+margin-top: 3%; 
+}
+
+#mlistview
+{
+display: none;
+}
+
+#nextandprev
+{
+margin-top: 15%;
+color: black;
+margin-left: 3%; 
+size: 14px; 
+float: center;
+}
+
+
+
+#nextandprev a
+{
+font-size: 20px;
+color: black;
+text-align: center;
+float: center;
+}
+
+#dlistview
+{
+background-color: #E8D18E;
+padding: 1%;
+margin: 1%; 
+margin-left: 4%;
+float: left; 
+width: 40%;
+height: 400px;
+}
+
+#dmapview
+{
+background-color: #E8D18E;
+padding: 1%;
+margin: 1%; 
+margin-right: 6%;
+float: right;
+width: 40%; 
+height: 400px; }
+
+
+#dmapview iframe
+
+{
+margin-left: 18%;
+margin-top: -7%;
+}
+
+#dlistview img
+{
+width: 30%;
+float: left;
+margin: -50px;
+}
+
+#dmapview img
+{
+width: 30%;
+float: left;
+margin: -50px;
+}
+
 
 
 h1 {
@@ -51,14 +146,20 @@ a {
 
 li
 {
-padding-bottom: 15px;
-list-style-type: none;
-
+padding-bottom: 10px;
 }
 
+#listimages img
+{
+width:14%;
+margin-top: -8%;
+margin-left: 30%;
+}
 
 #listhead
 {
+z-index:-1;
+position:relative;
 font-weight:bold;
 text-align:center;
 background-color:brown;
@@ -67,17 +168,95 @@ opacity:0.6;
 font-family:serif;
 font-size:24px;
 margin: 0 1%px;
-  margin-top: 1%;
+  margin-top: 3%;
   padding: 20px 20px;
   color: white;
 }
 
 #activitiesa, #communitiesa, #servicesa, #landmarksa, #eventsa, #dininga
 {
-float: right;
-
+float:right;
 }
 
+#list
+{
+text-align:left;
+color: black;
+font-family:serif;
+font-size:18px;
+size: 100%;
+margin-left: 30%;
+height:100%;
+list-style:none;
+/*overflow:scroll;*/
+}
+
+div.scroll
+{
+width:90%;
+height:100%;
+overflow:scroll;
+}
+
+
+
+/*****************************************LANDSCAPE*/
+@media screen and (max-width: 480px)  {
+
+#desktopviewcontent
+{
+display: none;
+}
+
+#listimages img
+{
+width: 30%;
+margin-top: -19%;
+margin-lefT: 3%;
+}
+
+#listhead
+{
+z-index:-1;
+font-weight:bold;
+text-align:center;
+background-color:brown;
+opacity:0.6;
+/*background-filter:alpha(opacity=60); */
+font-family:serif;
+font-size:24px;
+margin: 0 1%px;
+  margin-top: 7%;
+  padding: 20px 20px;
+  color: white;
+}
+
+#compass
+{
+display: inline;
+}
+
+#nextandprev
+{
+margin-top: 8%;
+color: black;
+margin-left: 5%; 
+size: 30px; 
+float: center;
+}
+
+#nextandprev a
+{
+font-size: 14px;
+color: black;
+text-align: center;
+float: center;
+}
+
+#mlistview
+{
+display: inline;
+}
 
 #list
 {
@@ -90,10 +269,5 @@ margin-left: 3%;
 height:100%;
 }
 
-div.scroll
-{
-width:90%;
-height:100%;
-overflow:scroll;
-}
 
+}

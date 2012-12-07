@@ -9,6 +9,8 @@ class CreateItems < ActiveRecord::Migration
       t.string :email
       t.string :website
       t.timestamps
+	  t.date :startdate
+	  t.date :enddate
     end
   end
 end

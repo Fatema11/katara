@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+<%= javascript_include_tag "application" %>
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Katara's What & Where" %></title>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
-     <% if logged_in? %>
-  <a href="/items/new">Add an item</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/mapspage">Map instructions</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/logout">Logout</a> 
-  <%end%>
     <%= yield(:head) %>
   </head>
   <body>
     <div id="container">
+       <% if logged_in? %>
+  <div class="button2"><a href="/items/new">Add an item</a></div> &nbsp; <div class="button2"><a href="/mapspage">Map instructions</a></div> &nbsp; <div class="button2"><a href="/logout">Logout</a> </div>
+  <%end%>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
