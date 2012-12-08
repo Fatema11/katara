@@ -7,23 +7,24 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, 
   vertical-align:baseline;
 }
 body {
-  -webkit-text-size-adjust:none;
+  /*-webkit-text-size-adjust:none;*/
   font-family:sans-serif;
-    background-image: url('newBG.jpg');
-  background-size: 100%;
-  background-repeat:none;
+  /*  background-image: url('background1.jpg');
+    
+  background-repeat:repeat-x;
+  */
 }
 
 #listbody { width: 12000px; } 
 
-.panel { width: 300px; float: left; padding-left: 30px; padding-right: 120px; margin-top: 45px; } 
+.panel { width: 300px; float: left; padding-left: 30px; padding-right: 30px; margin-top: 45px;} 
 
 ul#banner { position: fixed; line-height: 45px; margin: 0 30px; padding: 0; } 
 
-ul#banner li { list-style: none; display: inline; } 
+ul#banner li { list-style: none; } 
 
 
-
+/*
 
 #desktopviewcontent
 {
@@ -40,7 +41,7 @@ margin: 1%;
 {
 margin-top: 3%; 
 }
-
+*/
 #mlistview
 {
 display: none;
@@ -64,7 +65,7 @@ color: black;
 text-align: center;
 float: center;
 }
-
+/*
 #dlistview
 {
 background-color: #E8D18E;
@@ -109,7 +110,7 @@ margin: -50px;
 }
 
 
-
+*/
 h1 {
   font-size:36px;
   margin:15px;
@@ -133,20 +134,21 @@ a {
   color:#3c3c3c;
   text-decoration: none;
 } 
+/*
 .swipe {
   padding-bottom:20px;
 }
 .swipe li div, .swipe div div div {
   margin: 0 1%px;
   margin-top: 1%;
-/* padding: 20px 20px; */
+ padding: 20px 20px; 
   color: white;
 }
 
-
+*/
 li
 {
-padding-bottom: 10px;
+padding-bottom: 15px;
 }
 
 #listimages
@@ -154,9 +156,10 @@ padding-bottom: 10px;
 width:20%;
 height: 20%;
 margin-top: 0%;
-margin-left: 2%;
+margin-bottom: 0%;
+margin-left:2%;
 }
-
+/*
 #listhead
 {
 z-index:-1;
@@ -165,7 +168,7 @@ font-weight:bold;
 text-align:center;
 background-color:brown;
 opacity:0.6;
-/*background-filter:alpha(opacity=60); */
+background-filter:alpha(opacity=60); 
 font-family:serif;
 font-size:24px;
 margin: 0 1%px;
@@ -178,7 +181,7 @@ margin: 0 1%px;
 {
 float:right;
 }
-
+*/
 #list
 {
 text-align:left;
@@ -201,7 +204,7 @@ overflow:scroll;
 
 
 
-/*****************************************LANDSCAPE*/
+/*****************************************LANDSCAPE
 @media screen and (max-width: 480px)  {
 
 #desktopviewcontent
@@ -223,7 +226,7 @@ font-weight:bold;
 text-align:center;
 background-color:brown;
 opacity:0.6;
-/*background-filter:alpha(opacity=60); */
+/*background-filter:alpha(opacity=60); 
 font-family:serif;
 font-size:24px;
 margin: 0 1%px;
@@ -253,7 +256,7 @@ color: black;
 text-align: center;
 float: center;
 }
-
+*/
 #mlistview
 {
 display: inline;
@@ -271,4 +274,3 @@ height:100%;
 }
 
 
-}
