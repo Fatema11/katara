@@ -67,14 +67,14 @@
   <%end%>
 </p>
 
-</div> <!--end of wrapper -->
+
 
 </br>
 <p>
 <%= link_to "Show #{@item.name} on the map", @item.location %>
 
 </p>
-
+</div> <!--end of wrapper -->
 <br>
 <% if logged_in? %>
 <div class="button2">  <%= link_to 'Edit', edit_item_path(@item) %> 
