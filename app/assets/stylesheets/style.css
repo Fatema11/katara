@@ -16,11 +16,11 @@ body {
 
 #listbody { width: 12000px; } 
 
-.panel { width: 930px; float: left; padding-left: 30px; padding-right: 100px; margin-top: 45px; } 
+.panel { width: 300px; float: left; padding-left: 30px; padding-right: 120px; margin-top: 45px; } 
 
 ul#banner { position: fixed; line-height: 45px; margin: 0 30px; padding: 0; } 
 
-ul#banner li { list-style: none; } 
+ul#banner li { list-style: none; display: inline; } 
 
 
 
@@ -149,11 +149,12 @@ li
 padding-bottom: 10px;
 }
 
-#listimages img
+#listimages
 {
-width:14%;
-margin-top: -8%;
-margin-left: 30%;
+width:20%;
+height: 20%;
+margin-top: 0%;
+margin-left: 2%;
 }
 
 #listhead
