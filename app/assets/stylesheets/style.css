@@ -7,28 +7,43 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, 
   vertical-align:baseline;
 }
 body {
-  /*-webkit-text-size-adjust:none;*/
-  font-family:sans-serif;
-  /*  background-image: url('background1.jpg');
-    
-  background-repeat:repeat-x;
-  */
+    font-family:sans-serif;
+  background-size: 100%;
 }
 
+#dlvskyline { display: block;  position: absolute; size:100%; top: 0%;}
+#dlvskyline img { width: 100%; }
+
+#lvskyline { display: none;}
+footer #lvfooter { display: none; }
+#lvcompass {display: none;}
 #listbody { width: 12000px; } 
 
-.panel { width: 300px; float: left; padding-left: 30px; padding-right: 30px; margin-top: 45px;} 
+.panel { width: 1000px; float: left; padding-left: 30px;
+padding-right: 120px;  
+margin-top:3%; } 
 
-ul#banner { position: fixed; line-height: 45px; margin: 0 30px; padding: 0; } 
+#dlvskyline {display: block;  position: fixed; size:100%;}
+#lvskyline img { width: 100%; }
 
-ul#banner li { list-style: none; } 
+#banner { display: block; }
 
+ul#banner { margin-left: 26%; position: fixed; line-height: 10px; margin-top:23%; padding: 0; } 
 
-/*
+ul#banner li { list-style: none; display: inline; margin-right: 4%; text-align: center; } 
+
+#listheadimg 
+{ width: 100%; float: center;}
+
+#listheadimg img
+{ width: 40%; text-align: center;}
+
 
 #desktopviewcontent
 {
-margin-top: -2%;
+margin-top: 30%;
+background-color: black;
+height: 300px;
 }
 
 #accordion p
@@ -41,21 +56,20 @@ margin: 1%;
 {
 margin-top: 3%; 
 }
-*/
+
 #mlistview
 {
 display: none;
 }
 
-#nextandprev
+#next
 {
-margin-top: 15%;
-color: black;
-margin-left: 3%; 
-size: 14px; 
-float: center;
+display:none;
 }
 
+#prev
+{
+display:none; }
 
 
 #nextandprev a
@@ -65,7 +79,7 @@ color: black;
 text-align: center;
 float: center;
 }
-/*
+
 #dlistview
 {
 background-color: #E8D18E;
@@ -79,38 +93,24 @@ height: 400px;
 
 #dmapview
 {
-background-color: #E8D18E;
+background-image: url('texture.jpg');
+background-size: 100%;
 padding: 1%;
-margin: 1%; 
-margin-right: 6%;
+margin-top: -10%;
 float: right;
+margin-left: -5%;
 width: 40%; 
-height: 400px; }
-
+height: 350px;
+box-shadow: 10px 10px 5px #888888;
+border-radius: 10px;
+text-align: center;
+}
 
 #dmapview iframe
+{ 
+margin-top: 0.5%;
+margin-left: -3.5%;}
 
-{
-margin-left: 18%;
-margin-top: -7%;
-}
-
-#dlistview img
-{
-width: 30%;
-float: left;
-margin: -50px;
-}
-
-#dmapview img
-{
-width: 30%;
-float: left;
-margin: -50px;
-}
-
-
-*/
 h1 {
   font-size:36px;
   margin:15px;
@@ -134,32 +134,28 @@ a {
   color:#3c3c3c;
   text-decoration: none;
 } 
-/*
 .swipe {
   padding-bottom:20px;
 }
 .swipe li div, .swipe div div div {
   margin: 0 1%px;
   margin-top: 1%;
- padding: 20px 20px; 
+/* padding: 20px 20px; */
   color: white;
 }
 
-*/
+
 li
 {
-padding-bottom: 15px;
+padding-bottom: 10px;
 }
 
 #listimages
 {
 width:10%;
-height: 10%;
-margin-top: 0%;
-margin-bottom: 0%;
-margin-left:2%;
 }
-/*
+
+
 #listhead
 {
 z-index:-1;
@@ -168,7 +164,7 @@ font-weight:bold;
 text-align:center;
 background-color:brown;
 opacity:0.6;
-background-filter:alpha(opacity=60); 
+/*background-filter:alpha(opacity=60); */
 font-family:serif;
 font-size:24px;
 margin: 0 1%px;
@@ -181,18 +177,18 @@ margin: 0 1%px;
 {
 float:right;
 }
-*/
+
 #list
 {
 text-align:left;
 color: black;
 font-family:serif;
-font-size:18px;
-size: 100%;
-margin-left: 30%;
+font-size:20px;
+size: 40%;
+margin-left: 10%;
 height:100%;
-list-style:none;
-/*overflow:scroll;*/
+overflow:scroll;
+float: left;
 }
 
 div.scroll
@@ -202,23 +198,34 @@ height:100%;
 overflow:scroll;
 }
 
-
-
-/*****************************************LANDSCAPE
+/*****************************************LANDSCAPE*/
 @media screen and (max-width: 480px)  {
+
 
 #desktopviewcontent
 {
 display: none;
 }
 
-#listimages img
+#lvskyline { display: block;  position: fixed; size:100%;}
+#lvskyline img { width: 100%; }
+
+footer #lvfooter { display: block; position: fixed; top: 90%; }
+footer #lvfooter img { width: 100%; }
+
+#listimages
 {
-width: 30%;
-margin-top: -19%;
-margin-lefT: 3%;
+display: none;
 }
 
+#listheadimg 
+{ width: 100%; float: center;}
+
+#listheadimg img
+{ width: 100%; text-align: center;}
+
+#dmapview
+{ display:none; }
 #listhead
 {
 z-index:-1;
@@ -226,7 +233,7 @@ font-weight:bold;
 text-align:center;
 background-color:brown;
 opacity:0.6;
-/*background-filter:alpha(opacity=60); 
+/*background-filter:alpha(opacity=60); */
 font-family:serif;
 font-size:24px;
 margin: 0 1%px;
@@ -235,28 +242,50 @@ margin: 0 1%px;
   color: white;
 }
 
-#compass
+
+#lvcompass
 {
-display: inline;
+display: block;
+float: center;
+text-align: center;
+width: 90%;
+top: 100%;
 }
 
-#nextandprev
+#lvcompass img
 {
-margin-top: 8%;
-color: black;
-margin-left: 5%; 
-size: 30px; 
+width: 40%;
 float: center;
+text-align: center;
 }
+#next
+{
+display: inline;
+margin-top: 4%;
+color: black;
+margin-left: 3%; 
+size: 14px; 
+float: right;
+}
+
+#prev
+{
+display: inline;
+margin-top: 4%;
+color: black;
+margin-left: 3%; 
+size: 14px; 
+float: left;
+}
+
 
 #nextandprev a
 {
-font-size: 14px;
+font-size: 20px;
 color: black;
 text-align: center;
 float: center;
 }
-*/
 #mlistview
 {
 display: inline;
@@ -264,13 +293,25 @@ display: inline;
 
 #list
 {
-text-align:left;
-color: black;
+padding: 1%;
+color: white;
 font-family:serif;
-font-size:18px;
+font-size:20px;
+background-image: url('images/texture.jpg');
+height: 150px;
 size: 100%;
-margin-left: 3%;
-height:100%;
+width: 90%;
 }
 
+#list li
+{
+list-style: none;
+}
 
+#dlvskyline { display: none; }
+
+
+.panel { width: 350px; float: left; padding-left: 30px;
+padding-right: 120px;  
+margin-top:1.5%;} 
+}

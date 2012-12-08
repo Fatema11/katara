@@ -1,4 +1,4 @@
-<header><a href="/"><img src="/images/landingpage3.png" alt="skyline" ></a> </header>
+<header><a href="/"><img src="/images/" alt="skyline" ></a> </header>
 
 <div id="wrapper">
 
@@ -60,21 +60,26 @@
 </div>
 
 
-<p>
-  <% if @item.category == 'Events' %>
-  <%= @item.startdate %>
-  <%= @item.enddate %>
-  <%end%>
-</p>
+<% if @item.category == 'Events' %>
 
+  
+  <p><b>Start Date: </b><%= @item.startdate.strftime("%d %B %Y") %></p>
+  <br>
+  <p><b>End Date: </b><%= @item.enddate.strftime("%d %B %Y") %></p>
+  
 
-
-</br>
+<%end%>
+  
+  </br>
+<% if @item.location.nil? == false %>
 <p>
 <%= link_to "Show #{@item.name} on the map", @item.location %>
-
 </p>
+<%end%>
+
 </div> <!--end of wrapper -->
+
+
 <br>
 <% if logged_in? %>
 <div class="button2">  <%= link_to 'Edit', edit_item_path(@item) %> 

@@ -5,7 +5,8 @@ class ItemsController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
   
   def index
-    @items = Item.all
+
+    @items = Item.order('name ASC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -47,7 +48,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to "/mapspage", notice: 'Item was successfully created. Do not forget to add it to Google Maps as well!' }
         format.json { render json: @item, status: :created, location: @item }
       else
         format.html { render action: "new" }

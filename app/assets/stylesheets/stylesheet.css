@@ -2,18 +2,19 @@
 #skyline { display:none; }
 
 body {
-background-image: url('newBG.jpg');
-background-repeat: none;
+background-repeat: no-repeat;
 background-size: 100%;
 }
 
+#dlvskyline { display: block;  position: fixed; size:100%;}
+#dlvskyline img { width: 100%; }
 
 .newspaper
 {
 -moz-column-count:6; /* Firefox */
 -webkit-column-count:6; /* Safari and Chrome */
 column-count:6;
-margin-top: 15%;
+margin-top: 60%;
 text-align: center;
 font-family: sans-serif;
 font-style: bold;
@@ -24,6 +25,7 @@ font-style: bold;
 height:auto;
 max-width:70%;
 } 
+
 
 .link1{
 position:absolute;
@@ -67,12 +69,14 @@ margin:2%;
 
 #contactkatara
 {
-background-color: #E8D18E;
+background-image: url('texture.jpg');
 padding: 1%;
 margin-left: 9%; 
 width: 80%; 
 float: center;
 height: 250px;
+box-shadow: 10px 10px 5px #888888;
+border-radius: 10px;
 }
 
 #contactkatara h3
@@ -123,18 +127,19 @@ display: inline;
 
 #compass img
 {
-width: 40%;
+width: 20%;
 float: center;
 text-align: center;
 }
 
 
 
-#skyline  {  display:inline; }
+#skyline  {  display:inline; width: 100%; }
 #skyline img { width: 100%; }
 
+
 body {
-background-image: url('newBG.jpg');
+/*background-image: url('newBG.jpg');*/
 background-size: 100%;
 background-repeat: repeat-y;
 }
@@ -166,12 +171,13 @@ height:6.5%;
 
 .newspaper
 {
-margin-top: 8%;
+margin-top: -6%;
 -moz-column-count:2; /* Firefox */
 -webkit-column-count:2; /* Safari and Chrome */
 column-count:2;
-margin-top: none;
 }
+.newspaper img
+{ width: 50%; }
 
 #desktopcontent
 {
@@ -186,9 +192,12 @@ width: 100%;
 }
 #compass img
 {
+margin-top:-10%;
 width: 40%;
 float: center;
 text-align: center;
 }
 
+#dlvskyline
+{ display: none; }
 }
