@@ -6,10 +6,10 @@ background-repeat: no-repeat;
 background-size: 100%;
 }
 
-#dlvskyline { display: block;  position: fixed; size:100%; z-index:-1;}
+#dlvskyline { display: block;  position: absolute; size:100%; z-index:-1;}
 #dlvskyline img { width: 100%; z-index:-1; }
 
-#dfooter { display: block;  position: absolute; size:100%; top: 91%;}
+#dfooter { display: block; position: absolute;  size:100%; top: 100%; margin-top: 60px; margin-bottom: 0px;}
 #dfooter img { width: 100%; }
 
 .clear {
@@ -17,10 +17,15 @@ background-size: 100%;
 }
  
 #gallery {
-margin-top: 2%;
+    /*
+margin-top: 20px;;
 margin-left: 20%;
-margin-right: 10%;
-    position:relative;
+margin-right: 20%;
+margin-bottom: 0px;
+*/
+margin: 10 auto;
+display: block;
+ position:relative;
     height:360px
 }
     #gallery a {

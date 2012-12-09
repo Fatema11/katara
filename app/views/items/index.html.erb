@@ -26,19 +26,23 @@
     <!--Slide1-->
 <div id="activities" class="panel"> 
 <div id="prev"><a href="#events">< Prev</a></div>    <div id="next"><a href="#dining">Next ></a></div>
-<div id="listheadimg"><img src="images/HeaderActivity.png" alt="activity"></div>
+<div id="listheadimg"><img src="images/HeaderActivity.png" alt="activities"></div>
 
 <div id="list">
+  
 <% @items.each do |item| %>
-<ul>  <%  if item.category == "Activities" %>
+  <%  if item.category == "Activities" %>
+  <table>
+    
   <tr>
- <li>  <td><%= link_to "#{item.name}", item %></td> </li>
+   <td width="200px"><li><%= link_to "#{item.name}", item %> </li></td>
     <% if logged_in? %>
-  <div class="button"><td><%= link_to "Edit", edit_item_path(item) %></td></div>
-  <div class="button"><td><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></td></div>
+  <td><div class="button"><%= link_to "Edit", edit_item_path(item) %></div></td>
+  <td><div class="button"><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div></td>
     <%end%>
   </tr>  
-  </ul>
+ 
+</table>
 
 <% end  %>
 <% end  %>
@@ -56,19 +60,22 @@ marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473
     <!--Slide2-->
   <div id="dining" class="panel">
   <div id="prev"><a href="#activities">< Prev</a></div>    <div id="next"><a href="#communities">Next ></a></div>
-<div id="listheadimg"><img src="images/HeaderDining.png" alt="activity"></div>
+<div id="listheadimg"><img src="images/HeaderDining.png" alt="Dining"></div>
 
 <div id="list">
 <% @items.each do |item| %>
-<ul>  <%  if item.category == "Dining" %>
+  <%  if item.category == "Dining" %>
+<table>
+    
   <tr>
-  <li>  <td><%= link_to "#{item.name}", item %></td> </li> <!-- add item description? -->
-  </tr>
-  </ul>
-<% if logged_in? %> 
-  <div class="button"><td><%= link_to "Edit", edit_item_path(item) %></td></div>
-<div class="button"><td><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></td></div>
+   <td width="200px"><li><%= link_to "#{item.name}", item %> </li></td>
+    <% if logged_in? %>
+  <td><div class="button"><%= link_to "Edit", edit_item_path(item) %></div></td>
+  <td><div class="button"><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div></td>
     <%end%>
+  </tr>  
+ 
+</table>
     
 <% end  %>
 <% end  %>
@@ -87,19 +94,22 @@ marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473
   <div id="communities" class="panel">  
   <div id="prev"><a href="#dining">< Prev</a></div>    <div id="next"><a href="#services">Next ></a></div>
 
-<div id="listheadimg"><img src="images/HeaderCommunity.png" alt="activity"></div>
+<div id="listheadimg"><img src="images/HeaderCommunity.png" alt="Communities"></div>
 
 <div id="list">
 <% @items.each do |item| %>
-<ul>  <%  if item.category == "Communities" %>
+  <%  if item.category == "Communities" %>
+  <table>
+    
   <tr>
-  <li>  <td><%= link_to "#{item.name}", item %></td> </li> <!-- add item description? -->
-  </tr>
-  </ul>
-<% if logged_in? %> 
-  <div class="button"><td><%= link_to "Edit", edit_item_path(item) %></td></div>
-<div class="button"><td><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></td></div>
+   <td width="200px"><li><%= link_to "#{item.name}", item %> </li></td>
+    <% if logged_in? %>
+  <td><div class="button"><%= link_to "Edit", edit_item_path(item) %></div></td>
+  <td><div class="button"><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div></td>
     <%end%>
+  </tr>  
+ 
+</table>
     
 <% end  %>
 <% end  %>
@@ -117,19 +127,22 @@ marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473
   <div id="services" class="panel"> 
   <div id="prev"><a href="#communities">< Prev</a></div>    <div id="next"><a href="#landmarks">Next ></a></div>
 
-<div id="listheadimg"><img src="images/HeaderService.png" alt="activity"></div>
+<div id="listheadimg"><img src="images/HeaderService.png" alt="Services"></div>
 
 <div id="list">
 <% @items.each do |item| %>
-<ul>  <%  if item.category == "Services" %>
+  <%  if item.category == "Services" %>
+  <table>
+    
   <tr>
-  <li>  <td><%= link_to "#{item.name}", item %></td> </li> <!-- add item description? -->
-  </tr>
-  </ul>
-<% if logged_in? %> 
-  <div class="button"><td><%= link_to "Edit", edit_item_path(item) %></td></div>
-<div class="button"><td><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></td></div>
+   <td width="200px"><li><%= link_to "#{item.name}", item %> </li></td>
+    <% if logged_in? %>
+  <td><div class="button"><%= link_to "Edit", edit_item_path(item) %></div></td>
+  <td><div class="button"><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div></td>
     <%end%>
+  </tr>  
+ 
+</table>
     
 <% end  %>
 <% end  %>
@@ -152,15 +165,18 @@ marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473
 
 <div id="list">
 <% @items.each do |item| %>
-<ul>  <%  if item.category == "Landmarks" %>
+  <%  if item.category == "Landmarks" %>
+  <table>
+    
   <tr>
-  <li>  <td><%= link_to "#{item.name}", item %></td> </li> <!-- add item description? -->
-  </tr>
-  </ul>
-<% if logged_in? %> 
-  <div class="button"><td><%= link_to "Edit", edit_item_path(item) %></td></div>
-<div class="button"><td><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></td></div>
+   <td width="200px"><li><%= link_to "#{item.name}", item %> </li></td>
+    <% if logged_in? %>
+  <td><div class="button"><%= link_to "Edit", edit_item_path(item) %></div></td>
+  <td><div class="button"><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div></td>
     <%end%>
+  </tr>  
+ 
+</table>
     
 <% end  %>
 <% end  %>
@@ -178,35 +194,96 @@ marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473
   <div id="prev"><a href="#landmarks">< Prev</a></div>    <div id="next"><a href="#activities">Next ></a></div>
 <div id="listheadimg"><img src="images/HeaderEvent.png" alt="activity"></div>
 
+<% @@today_events = Array.new %>
+    <% @@future_events = Array.new %>
+    <% @@past_events = Array.new %>
+    
+    <% @items.each do |item| %>
+    <%  if item.category == "Events" %>
+    
+    <% if item.startdate.nil? || (item.startdate <= Date.today && item.enddate >= Date.today) %>
+    <% @@today_events << item %>     
+    
+    
+    <%  elsif item.startdate > Date.today %>
+    <% @@future_events << item %> 
+    
+    
+    <% else %>
+     <!--item.startdate < Date.today && item.enddate < Date.today -->
+    <% @@past_events << item %>
+    <% end %>
+    
+   <% end %>
+ <% end %>
+     
+     
 <div id="list">
-<% @items.each do |item| %>
-<ul>  <%  if item.category == "Events" %>
+  <b> Today's events: </b>
+<% @@today_events.each do |item| %>
+<table>
+    
   <tr>
-  <li>  <td><%= link_to "#{item.name}", item %></td> </li> <!-- add item description? -->
-  </tr>
-  </ul>
-<% if logged_in? %> 
-  <div class="button"><td><%= link_to "Edit", edit_item_path(item) %></td></div>
-<div class="button"><td><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></td></div>
+   <td width="200px"><li><%= link_to "#{item.name}", item %> </li></td>
+    <% if logged_in? %>
+  <td><div class="button"><%= link_to "Edit", edit_item_path(item) %></div></td>
+  <td><div class="button"><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div></td>
     <%end%>
+  </tr>  
+ 
+</table>
     
 <% end  %>
-<% end  %>
- </div>
+
+<b> Future events: </b>
+<% @@future_events.each do |item| %>
+<table>
+    
+  <tr>
+   <td width="200px"><li><%= link_to "#{item.name}", item %> </li></td>
+    <% if logged_in? %>
+  <td><div class="button"><%= link_to "Edit", edit_item_path(item) %></div></td>
+  <td><div class="button"><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div></td>
+    <%end%>
+  </tr>  
+ 
+</table>
+    
+<%end%>
+
+
+<b> Past events: </b>
+<% @@past_events.each do |item| %>
+<table>
+    
+  <tr>
+   <td width="200px"><li><%= link_to "#{item.name}", item %> </li></td>
+    <% if logged_in? %>
+  <td><div class="button"><%= link_to "Edit", edit_item_path(item) %></div></td>
+  <td><div class="button"><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div></td>
+    <%end%>
+  </tr>  
+ 
+</table>
+    
+<%end%>
+
+</div>
   <div id="dmapview">
 <iframe width="80%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473206983699.0004cead1a3580094bcb3&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=25.360024,51.525573&amp;spn=0.000524,0.00235&amp;output=embed"></iframe>
 </div> 
    <div id="lvcompass"><a href="/maps/events"><img src="images/compass.png" alt="compass"></a></div> 
 
 
-  </div>
+  
   
   </div><!--end of listbody div -->
   
-<!-- <footer>
+<footer>
   <div id="lvfooter"><img src="images/lvfooter.jpg" alt="skyline"></div>
 </footer>
-</body> -->
+
+</body> 
 
 <script>
   $(document).ready(function() { $("#banner a").bind("click",function(event){ event.preventDefault(); var target = $(this).attr("href"); $("html, body").stop().animate({ scrollLeft: $(target).offset().left, scrollTop: $(target).offset().top }, 1200); }); });   
