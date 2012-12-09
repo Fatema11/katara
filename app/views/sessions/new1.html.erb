@@ -1,9 +1,5 @@
+<% title "Log in" %>
 
-
-
-
-<div id= "wrapperLog">
-<h1>Login</h1> 
 <p>Don't have an account? <%= link_to "Sign up!", signup_path %></p>
 
 <%= form_tag sessions_path do %>
@@ -17,5 +13,3 @@
   </p>
   <p><%= submit_tag "Log in" %></p>
 <% end %>
-
-</div>

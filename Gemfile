@@ -56,3 +56,5 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem 'sequel'
 
 gem 'validates_timeliness', '~> 3.0.2'
+
+gem 'thin'
