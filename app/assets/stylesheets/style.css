@@ -262,7 +262,7 @@ text-align: center;
 }
 #next
 {
-display: inline;
+display: none;
 margin-top: 4%;
 color: black;
 margin-left: 3%; 
@@ -272,7 +272,7 @@ float: right;
 
 #prev
 {
-display: inline;
+display: none;
 margin-top: 4%;
 color: black;
 margin-left: 3%; 
@@ -313,8 +313,8 @@ list-style: none;
 #dlvskyline { display: none; }
 
 
-.panel { width: 300px; float: left; padding-left: 30px;
-padding-right: 120px;  
+.panel { width: 250px; float: left; padding-left: 30px;
+padding-right: 100px;  
 margin-top:2.5%;} 
 
 #dpheader {
