@@ -177,36 +177,12 @@ marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473
   <div id="events" class="panel">
   <div id="prev"><a href="#landmarks">< Prev</a></div>    <div id="next"><a href="#activities">Next ></a></div>
 <div id="listheadimg"><img src="images/HeaderEvent.png" alt="activity"></div>
-<% @@today_events = Array.new %>
-    <% @@future_events = Array.new %>
-    <% @@past_events = Array.new %>
-    
-    <% @items.each do |item| %>
-    <%  if item.category == "Events" %>
-    
-    <% if item.startdate.nil? || (item.startdate <= Date.today && item.enddate >= Date.today) %>
-    <% @@today_events << item %>     
-    
-    
-    <%  elsif item.startdate > Date.today %>
-    <% @@future_events << item %> 
-    
-    
-    <% else %>
-     <!--item.startdate < Date.today && item.enddate < Date.today -->
-    <% @@past_events << item %>
-    <% end %>
-    
-   <% end %>
- <% end %>
-     
-     
+
 <div id="list">
-  <p> Today's events: </p>
-<% @@today_events.each do |item| %>
-<ul>  
+<% @items.each do |item| %>
+<ul>  <%  if item.category == "Events" %>
   <tr>
-  <li>  <td><%= link_to "#{item.name}", item %></td> </li> 
+  <li>  <td><%= link_to "#{item.name}", item %></td> </li> <!-- add item description? -->
   </tr>
   </ul>
 <% if logged_in? %> 
@@ -215,37 +191,7 @@ marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473
     <%end%>
     
 <% end  %>
-
-<p> Future events: </p>
-<% @@future_events.each do |item| %>
-<ul>    
-  <tr>
-  <li>  <td><%= link_to "#{item.name}", item %></td> </li> 
-  </tr>
-  </ul>
-<% if logged_in? %> 
-  <div class="button"><td><%= link_to "Edit", edit_item_path(item) %></div>
-<div class="button"><td><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div>
-    
-<%end%>
-    
-<%end%>
-
-
-<p> Past events: </p>
-<% @@past_events.each do |item| %>
-<ul>    
-  <tr>
-  <li>  <td><%= link_to "#{item.name}", item %></td> </li> 
-  </tr>
-  </ul>
-<% if logged_in? %> 
-  <div class="button"><td><%= link_to "Edit", edit_item_path(item) %></div>
-  <div class="button"><td><%= link_to "Delete", item, :confirm => 'Are you sure?', :method => :delete %></div>
-<%end%>
-    
-<%end%>
-
+<% end  %>
  </div>
   <div id="dmapview">
 <iframe width="80%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473206983699.0004cead1a3580094bcb3&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=25.360024,51.525573&amp;spn=0.000524,0.00235&amp;output=embed"></iframe>
@@ -266,5 +212,11 @@ marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213986189473
   $(document).ready(function() { $("#banner a").bind("click",function(event){ event.preventDefault(); var target = $(this).attr("href"); $("html, body").stop().animate({ scrollLeft: $(target).offset().left, scrollTop: $(target).offset().top }, 1200); }); });   
 </script>
 
+<script>
+  $(document).ready(function() { $("#prev a").bind("click",function(event){ event.preventDefault(); var target = $(this).attr("href"); $("html, body").stop().animate({ scrollLeft: $(target).offset().left, scrollTop: $(target).offset().top }, 1200); }); });   
+</script>
 
+<script>
+  $(document).ready(function() { $("#next a").bind("click",function(event){ event.preventDefault(); var target = $(this).attr("href"); $("html, body").stop().animate({ scrollLeft: $(target).offset().left, scrollTop: $(target).offset().top }, 1200); }); });   
+</script>
 </html>

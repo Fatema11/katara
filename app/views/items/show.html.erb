@@ -1,5 +1,10 @@
-<header><a href="/"><img src="/images/" alt="skyline" ></a> </header>
-
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/> 
+<link href='stylesheets/list.css' rel='stylesheet'/>
+</head>
+<body>
+<header><div id="dpheader"><a href="/"><img style="width:100%;" src="/images/lvheader.jpg" alt="skyline" ></a></div> </header>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="wrapper">
 
 <p id="notice"><%= notice %></p>
@@ -60,25 +65,20 @@
 </div>
 
 
-<% if @item.category == 'Events' %>
-
-  
-  <p><b>Start Date: </b><%= @item.startdate.strftime("%d %B %Y") %></p>
-  <br>
-  <p><b>End Date: </b><%= @item.enddate.strftime("%d %B %Y") %></p>
-  
-
-<%end%>
-  
-  </br>
-<% if @item.location.nil? == false %>
 <p>
-<%= link_to "Show #{@item.name} on the map", @item.location %>
+  <% if @item.category == 'Events' %>
+  <%= @item.startdate %>
+  <%= @item.enddate %>
+  <%end%>
 </p>
-<%end%>
 
 </div> <!--end of wrapper -->
 
+</br>
+<p>
+<%= link_to "Show #{@item.name} on the map", @item.location %>
+
+</p>
 
 <br>
 <% if logged_in? %>
@@ -86,4 +86,7 @@
 <%end%></div>
 <div class="button2"><%= link_to 'Back', items_path %></div>
 
+<footer> <div id="dpfooter"><a href="/"><img style="width:100%;" src="/images/lvfooter.jpg" alt="skyline" ></a></div> </footer>
+
+</body>
 

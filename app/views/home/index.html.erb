@@ -4,6 +4,66 @@
 		<title>Katara: What and Where	</title>
 		 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />    
 		<LINK REL=StyleSheet HREF="stylesheets/stylesheet.css" TYPE="text/css" MEDIA=screen>
+		<script>$(document).ready(function() {      
+     
+    //Execute the slideShow
+    slideShow();
+ 
+});
+ 
+function slideShow() {
+ 
+    //Set the opacity of all images to 0
+    $('#gallery a').css({opacity: 0.0});
+     
+    //Get the first image and display it (set it to full opacity)
+    $('#gallery a:first').css({opacity: 1.0});
+     
+    //Set the caption background to semi-transparent
+    $('#gallery .caption').css({opacity: 0.7});
+ 
+    //Resize the width of the caption according to the image width
+    $('#gallery .caption').css({width: $('#gallery a').find('img').css('width')});
+     
+    //Get the caption of the first image from REL attribute and display it
+    $('#gallery .content').html($('#gallery a:first').find('img').attr('rel'))
+    .animate({opacity: 0.7}, 400);
+     
+    //Call the gallery function to run the slideshow, 6000 = change to next image after 6 seconds
+    setInterval('gallery()',6000);
+     
+}
+ 
+function gallery() {
+     
+    //if no IMGs have the show class, grab the first image
+    var current = ($('#gallery a.show')?  $('#gallery a.show') : $('#gallery a:first'));
+ 
+    //Get next image, if it reached the end of the slideshow, rotate it back to the first image
+    var next = ((current.next().length) ? ((current.next().hasClass('caption'))? $('#gallery a:first') :current.next()) : $('#gallery a:first'));   
+     
+    //Get next image caption
+    var caption = next.find('img').attr('rel'); 
+     
+    //Set the fade in effect for the next image, show class has higher z-index
+    next.css({opacity: 0.0})
+    .addClass('show')
+    .animate({opacity: 1.0}, 1000);
+ 
+    //Hide the current image
+    current.animate({opacity: 0.0}, 1000)
+    .removeClass('show');
+     
+    //Set the opacity to 0 and height to 1px
+    $('#gallery .caption').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 }); 
+     
+    //Animate the caption, opacity to 0.7 and heigth to 100px, a slide up effect
+    $('#gallery .caption').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+     
+    //Display the content
+    $('#gallery .content').html(caption);
+         
+}</script>
 	</head>
 	
 <header>
@@ -39,7 +99,30 @@
 </div>
 
 
-
+<div id="gallery">
+ 
+    <a href="#" class="show">
+    <img src="images/kataraimages/katara1.jpg" alt="Flowing Rock" alt="" title="" width="580" height="360" rel="<h3>Pigeon Tower</h3>One of the most beautiful and important landmarks in Katara."/></a>
+    </a>
+     
+    <a href="#">
+        <img src="images/kataraimages/katara2.jpg" alt="pictureofkatara" alt="" title="" width="580" height="360" rel="<h3>Katara's Buildings</h3>Even with the modern content of each building the architecture is traditional"/>
+    </a>
+    
+     <a href="#">
+        <img src="images/kataraimages/katara3.jpg" alt="pictureofkatara" alt="" title="" width="580" height="360" rel="<h3>Qatar Fine Arts Society</h3>This building brings together a community of designers, artists and thinkers"/>
+    </a>
+     <a href="#">
+        <img src="images/kataraimages/katara4.jpg" alt="pictureofkatara" alt="" title="" width="580" height="360" rel="<h3>Friday Mosque</h3>In this Moroccan style architecture mosque Friday prayers are held"/>
+    </a>
+     <a href="#">
+        <img src="images/kataraimages/katara5.jpg" alt="pictureofkatara" alt="" title="" width="580" height="360" rel="<h3>Grass Blades</h3>description"/>
+    </a>
+    
+    
+    <div class="caption"><div class="content"></div></div>
+</div>
+<div class="clear"></div>
 
 <div id="compass">
   <a href="/maps/all"><img src="images/compass.png" alt="compass"></a>
@@ -47,7 +130,8 @@
 
   
 <footer>
-  <div id="lvfooter"><img src="images/lvfooter.jpg" alt="skyline"></div>
+<div id="dfooter"><a href="/"><img src="images/dfooter.jpg" alt="skyline"></div></a>
+<!--  <div id="lvfooter"><img src="images/lvfooter.jpg" alt="skyline"></div>-->
 </footer>
 </body>	
 </html>

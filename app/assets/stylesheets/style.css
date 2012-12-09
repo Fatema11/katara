@@ -11,9 +11,11 @@ body {
   background-size: 100%;
 }
 
+#dpfooter, #dpheader { display: none; }
 #dlvskyline { display: block;  position: absolute; size:100%; top: 0%;}
 #dlvskyline img { width: 100%; }
 
+#wrapper { margin-left: 20%; }
 #lvskyline { display: none;}
 footer #lvfooter { display: none; }
 #lvcompass {display: none;}
@@ -21,7 +23,7 @@ footer #lvfooter { display: none; }
 
 .panel { width: 1000px; float: left; padding-left: 30px;
 padding-right: 120px;  
-margin-top:3%; } 
+margin-top:350px; } 
 
 #dlvskyline {display: block;  position: fixed; size:100%;}
 #lvskyline img { width: 100%; }
@@ -30,7 +32,7 @@ margin-top:3%; }
 
 ul#banner { margin-left: 26%; position: fixed; line-height: 10px; margin-top:23%; padding: 0; } 
 
-ul#banner li { list-style: none; display: inline; margin-right: 4%; text-align: center; } 
+ul#banner li { list-style: none; display: inline; margin-right: 4%; text-align: center; size:100%; } 
 
 #listheadimg 
 { width: 100%; float: center;}
@@ -138,7 +140,7 @@ a {
   padding-bottom:20px;
 }
 .swipe li div, .swipe div div div {
-  margin: 0 1%px;
+  margin: 0 1%;
   margin-top: 1%;
 /* padding: 20px 20px; */
   color: white;
@@ -167,7 +169,7 @@ opacity:0.6;
 /*background-filter:alpha(opacity=60); */
 font-family:serif;
 font-size:24px;
-margin: 0 1%px;
+margin: 0 1%;
   margin-top: 3%;
   padding: 20px 20px;
   color: white;
@@ -313,5 +315,16 @@ list-style: none;
 
 .panel { width: 350px; float: left; padding-left: 30px;
 padding-right: 120px;  
-margin-top:1.5%;} 
+margin-top:2.5%;} 
+
+#dpheader {
+display: block;  position: absolute; size:100%; top: 0%; }
+#dpheader img { width: 100%; }
+
+#dpfooter {
+display: block;  position: fixed; size:100%; top: 98%; }
+#dpfooter img { width: 100%; }
+
+#wrapper { margin-left: 0%; }
+
 }
