@@ -17,13 +17,12 @@ background-size: 100%;
 }
  
 #gallery {
-    /*
+    
 margin-top: 20px;;
-margin-left: 20%;
-margin-right: 20%;
-margin-bottom: 0px;
-*/
-margin: 10 auto;
+margin-left: 15%;
+margin-right: 15%;
+margin-bottom: 10px;
+
 display: block;
  position:relative;
     height:360px
