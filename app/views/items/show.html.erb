@@ -3,11 +3,24 @@
 <link href='stylesheets/list.css' rel='stylesheet'/>
 </head>
 <body>
-<header><div id="dpheader"><a href="/"><img style="width:100%;" src="/images/lvheader.jpg" alt="skyline" ></a></div> </header>
+<header>
+<div id="dpheader"><a href="/"><img style="width:100%;" src="/images/lvheader.jpg" alt="skyline" ></a></div>
+<div id="dlvskyline"><a href="/"><img src="/images/dlvheader.jpg" alt="skyline"></div></a>
+</header>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <div id="wrapper">
 
 <p id="notice"><%= notice %></p>
+
+<div class='spread'>
+  <div class='twshare left'>
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="funonrails">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  </div>
+  <br><br>
+  <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="" layout="button_count" show_faces="false" width="450" font=""></fb:like>
+</div>
+<br>
 
 <div id="cat">
 <p>
@@ -72,21 +85,30 @@
   <%end%>
 </p>
 
+<% if logged_in? %>
+<div class="button2" style="float: right;">  <b><%= link_to 'Edit', edit_item_path(@item) %></b> 
+<%end%></div>
+
+<div class="button2" style="float: right; margin-right: 5%;"><b><%= link_to 'Back', items_path %></b></div>
+<br><br>
+
 </div> <!--end of wrapper -->
 
-</br>
-<p>
-<%= link_to "Show #{@item.name} on the map", @item.location %>
 
-</p>
+<div id="itemlocation" style="height: 50%;"> <iframe width="80%" height="300" 
+frameborder="0" scrolling="no" marginheight="0" 
+marginwidth="0" src="<%= @item.location %>&amp;output=embed"> </iframe> 
+
+</div>
+</br>
+
+</div>
+
+
 
 <br>
-<% if logged_in? %>
-<div class="button2">  <%= link_to 'Edit', edit_item_path(@item) %> 
-<%end%></div>
-<div class="button2"><%= link_to 'Back', items_path %></div>
 
-<footer> <div id="dpfooter"><a href="/"><img style="width:100%;" src="/images/lvfooter.jpg" alt="skyline" ></a></div> </footer>
+<footer>  </footer>
 
 </body>
 

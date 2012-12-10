@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(:version => 20121113191233) do
     t.datetime "updated_at"
     t.string   "location",        :limit => nil
     t.binary   "picture"
-    t.datetime "startdate"
-    t.datetime "enddate"
   end
 
   add_index "items", ["id"], :name => "sqlite_autoindex_items_1", :unique => true

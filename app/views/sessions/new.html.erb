@@ -1,10 +1,13 @@
-
+<header>  <div id="dlvskyline"><a href="/"><img src="images/dlvheader.jpg" alt="skyline"></div></a>
+<div id="lvskyline"><a href="/"><img src="images/lvheader.jpg" alt="skyline"></div></a>
+  </header>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
 <div id= "wrapperLog">
 <h1>Login</h1> 
-<!--<p>Don't have an account? <#%= link_to "Sign up!", signup_path %></p>-->
+<p>Don't have an account? <%= link_to "Sign up!", signup_path %></p>
 
 <%= form_tag sessions_path do %>
   <p>
@@ -15,7 +18,7 @@
     <%= label_tag :password %><br />
     <%= password_field_tag :password %>
   </p>
-  <p><%= submit_tag "Log in" %></p>
+  <p><div class="button2" style="float: left;"><%= submit_tag "Log in" %></p></div>
 <% end %>
 
 </div>

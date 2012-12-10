@@ -1,0 +1,338 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+}
+body {
+    font-family:sans-serif;
+  background-size: 100%;
+}
+
+#dpfooter, #dpheader { display: none; }
+#dlvskyline { display: block;  position: absolute; size:100%; top: 0%;}
+#dlvskyline img { width: 100%; }
+
+#wrapper { margin-left: 20%; }
+#lvskyline { display: none;}
+footer #lvfooter { position:fixed; }
+#lvcompass {display: none;}
+#listbody { width: 12000px; } 
+
+.panel { width: 1000px; float: left; padding-left: 30px;
+padding-right: 120px;  
+margin-top:300px; } 
+
+#dlvskyline {display: block;  position: fixed; size:100%;}
+#lvskyline img { width: 100%; }
+
+#banner { display: block; position: absolute; top: -20%; bottom: 300px; }
+
+ul#banner { margin-left: 26%; position: fixed; line-height: 10px; margin-top:23%; padding: 0; } 
+
+ul#banner li { list-style: none; display: inline; margin-right: 4%; text-align: center; size:100%; } 
+
+#listheadimg 
+{ width: 100%; float: center;}
+
+#listheadimg img
+{ width: 40%; text-align: center;}
+
+
+#desktopviewcontent
+{
+margin-top: 30%;
+background-color: black;
+height: 300px;
+}
+
+#accordion p
+{
+color: grey;
+margin: 1%; 
+}
+
+#accordion h3
+{
+margin-top: 3%; 
+}
+
+#mlistview
+{
+display: none;
+}
+
+#next
+{
+display:none;
+}
+
+#prev
+{
+display:none; }
+
+
+#nextandprev a
+{
+font-size: 20px;
+color: black;
+text-align: center;
+float: center;
+}
+
+#dlistview
+{
+background-color: #E8D18E;
+padding: 1%;
+margin: 1%; 
+margin-left: 4%;
+float: left; 
+width: 90%;
+height: 400px;
+}
+
+#dmapview
+{
+background-image: url('texture.jpg');
+background-size: 100%;
+padding: 1%;
+margin-top: -10%;
+float: right;
+margin-left: -5%;
+width: 40%; 
+height: 350px;
+box-shadow: 10px 10px 5px #888888;
+border-radius: 10px;
+text-align: center;
+}
+
+#dmapview iframe
+{ 
+margin-top: 0.5%;
+margin-left: -3.5%;}
+
+h1 {
+  font-size:36px;
+  margin:15px;
+  text-align:center;
+  color:black;
+}
+h2 {
+  font-size:14px;
+  font-weight:bold;
+  color:black;
+  margin:20px 10px 10px;
+}
+small {
+  margin:0 10px 30px;
+  display:block;
+  font-size:12px;
+}
+a {
+  margin:0 0 0 0px;
+  font-size:14px;
+  color:#3c3c3c;
+  text-decoration: none;
+} 
+.swipe {
+  padding-bottom:20px;
+}
+.swipe li div, .swipe div div div {
+  margin: 0 1%;
+  margin-top: 1%;
+/* padding: 20px 20px; */
+  color: white;
+}
+
+
+li
+{
+padding-bottom: 10px;
+list-style: none;
+}
+
+#listimages
+{
+width:10%;
+}
+
+.button {
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: -5px;
+}
+#listhead
+{
+z-index:-1;
+position:relative;
+font-weight:bold;
+text-align:center;
+background-color:brown;
+opacity:0.6;
+/*background-filter:alpha(opacity=60); */
+font-family:serif;
+font-size:24px;
+margin: 0 1%;
+  margin-top: 3%;
+  padding: 20px 20px;
+  color: white;
+}
+
+#activitiesa, #communitiesa, #servicesa, #landmarksa, #eventsa, #dininga
+{
+float:right;
+}
+
+#list
+{
+text-align:left;
+color: black;
+font-family:serif;
+font-size:20px;
+size: 100%;
+margin-left: 5%;
+padding: 2%;
+height:100%;
+width: 300px;
+float: left;
+
+}
+
+div.scroll
+{
+width:90%;
+height:100%;
+overflow:scroll;
+}
+
+/*****************************************LANDSCAPE*/
+@media screen and (max-width: 480px)  {
+
+
+#desktopviewcontent
+{
+display: none;
+}
+
+#lvskyline { display: block;  position: absolute; size:100%; }
+#lvskyline img { width: 100%; }
+
+footer #lvfooter { display: none; }
+footer #lvfooter img { width: 100%; }
+
+#listimages
+{
+display: none;
+}
+
+#listheadimg 
+{ width: 100%; float: center;}
+
+#listheadimg img
+{ width: 100%; text-align: center;}
+
+#dmapview
+{ display:none; }
+#listhead
+{
+z-index:-1;
+font-weight:bold;
+text-align:center;
+background-color:brown;
+opacity:0.6;
+/*background-filter:alpha(opacity=60); */
+font-family:serif;
+font-size:24px;
+margin: 0 1%px;
+  margin-top: 7%;
+  padding: 20px 20px;
+  color: white;
+}
+
+
+#lvcompass
+{
+display: block;
+float: center;
+text-align: center;
+width: 90%;
+top: 100%;
+}
+
+#lvcompass img
+{
+width: 40%;
+float: center;
+text-align: center;
+}
+#next
+{
+display: none;
+margin-top: 4%;
+color: black;
+margin-left: 3%; 
+size: 14px; 
+float: right;
+}
+
+#prev
+{
+display: none;
+margin-top: 4%;
+color: black;
+margin-left: 3%; 
+size: 14px; 
+float: left;
+}
+
+
+#nextandprev a
+{
+font-size: 20px;
+color: black;
+text-align: center;
+float: center;
+}
+#mlistview
+{
+display: none;
+}
+
+#list
+{
+padding: 1%;
+color: white;
+font-family:serif;
+font-size:20px;
+background-image: url('images/texture.jpg');
+height: 150px;
+size: 100%;
+width: 90%;
+
+}
+
+#list li
+{
+list-style: none;
+}
+
+#dlvskyline { display: none; }
+
+
+.panel { width: 250px; float: left; padding-left: 30px;
+padding-right: 100px;  
+margin-top:2.5%;} 
+
+#dpheader {
+display: block;  position: absolute; size:100%; top: 0%; }
+#dpheader img { width: 100%; }
+
+#dpfooter {
+display: block;  position: fixed; size:100%; top: 98%; }
+#dpfooter img { width: 100%; }
+
+#wrapper { margin-left: 0%; }
+
+}
