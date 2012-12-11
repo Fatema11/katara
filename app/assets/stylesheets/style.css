@@ -247,7 +247,7 @@ overflow:scroll;
 display: none;
 }
 
-#lvskyline { display: block;  position: fixed; size:100%}
+#lvskyline { display: block;  position: fixed; size:100%; z-index: -1;}
 #lvskyline img { width: 100%; }
 
 footer #lvfooter { display: block; position: fixed; top: 90%; }
@@ -259,7 +259,7 @@ display: none;
 }
 
 #listheadimg 
-{ width: 100%; float: center;}
+{ width: 100%; float: center; margin-top: -25%;}
 
 #listheadimg img
 { width: 100%; text-align: center;}
@@ -341,7 +341,8 @@ background-image: url('images/texture.jpg');
 height: 150px;
 size: 100%;
 width: 90%;
-margin-top: -5%;
+
+
 }
 
 
@@ -355,8 +356,7 @@ list-style: none;
 
 
 .panel { width: 350px; float: left; padding-left: 30px;
-padding-right: 120px;  
-margin-top:2.5%;} 
+padding-right: 120px; } 
 
 #dpheader {
 display: block;  position: absolute; size:100%; top: 0%; }
