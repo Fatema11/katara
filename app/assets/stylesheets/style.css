@@ -247,7 +247,7 @@ overflow:scroll;
 display: none;
 }
 
-#lvskyline { display: block;  position: fixed; size:100%;}
+#lvskyline { display: block;  position: fixed; size:100%}
 #lvskyline img { width: 100%; }
 
 footer #lvfooter { display: block; position: fixed; top: 90%; }
@@ -341,6 +341,7 @@ background-image: url('images/texture.jpg');
 height: 150px;
 size: 100%;
 width: 90%;
+margin-top: -5%;
 }
 
 
