@@ -47,11 +47,11 @@ padding-right: 120px;
 margin-top:350px; } 
 
 #dlvskyline {display: block;  position: fixed; size:100%;}
-#lvskyline img { width: 100%; }
+#lvskyline img { width: 100%; position: fixed;}
 
 #banner { display: block; }
 
-ul#banner { margin-left: 26%; position: fixed; line-height: 10px; margin-top:23%; padding: 0; } 
+ul#banner { margin-left: 26%; position: fixed; line-height: 10px; margin-top:25%; padding: 0; } 
 
 ul#banner li { list-style: none; display: inline; margin-right: 4%; text-align: center; size:100%; } 
 
@@ -87,12 +87,12 @@ display: none;
 
 #next
 {
-display:none;
+display:inline;
 }
 
 #prev
 {
-display:none; }
+display:inline; }
 
 
 #nextandprev a
